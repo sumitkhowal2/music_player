@@ -1,0 +1,58 @@
+<!-- This is the Music player function--include html,css,javascript -->
+<html>
+<head>
+<style>   <!-- this is style css of the program-->
+audio{
+border-radius:60px;
+background:linear-gradient(to top left,cyan,hotpink,gold); 
+}
+.container audio::-webkit-media-controls-panel{
+background:linear-gradient(to top left,cyan,hotpink,gold); 
+}
+.container{
+    border: none;
+    margin-top: 10%;
+    width: fit-content;
+    padding:30px;
+    border-radius: 50px;
+
+    background: linear-gradient(to top left,red,blue,yellow,cyan);
+}
+h1{
+font-family:Blackadder ITC;
+font-size:60px;
+text-shadow: 10px 16px 10px;
+}
+#gif{
+    border-radius: 100px;
+}
+</style>
+<script language="javascript"><!--this is script code of the javascript-->
+var color=new Array("springgreen","lightyellow","teal","red","green","pink","magenta","mediumpurple","olive","palegreen","orangered","skyblue","rosybrown","blue","peachpuff","orange");
+var i=0;   // these are color of function---
+function change_color()
+{
+window.document.bgColor=color[i];
+if(i>17)
+i=0;
+else
+i++;
+setTimeout("change_color()",400);  // 400 is second of color change loop
+}
+</script>
+
+</head>
+<body onload="change_color()">         <!-- on body onload function created-->
+<center>
+<div class="container">
+    <div class="container2">
+<h1>Music Player</h1>
+<img src="flash.gif" id="gif"><br><br>
+<audio controls autoplay loop><source src="song2.mp3"></audio>
+</div></div>
+</center>
+</body>
+
+</html>
+
+<!--- let's see the result --->
